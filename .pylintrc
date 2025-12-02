@@ -1,2 +1,4 @@
 [MASTER]
-extension-pkg-allow-list=cv2,numpy,matplotlib
+
+[MESSAGES CONTROL]
+disable=import-error
