@@ -1,8 +1,9 @@
+import os
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-import os
 from main import IMAGE_DATA
+
 
 
 def draw_grid(image, grid_size=50):
@@ -39,6 +40,7 @@ def draw_grid(image, grid_size=50):
 
 
 def visualize_results():
+        # pylint: disable=too-many-locals
     """
     Visualize the results of the Planar Metric Rectification Engine.
     
@@ -77,7 +79,7 @@ def visualize_results():
         rectified_img_rgb = cv2.cvtColor(rectified_img, cv2.COLOR_BGR2RGB)
         
         # Create figure with two subplots
-        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 7))
+        _, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 7))
         
         # Plot original image with corner points
         ax1.imshow(original_img_rgb)
